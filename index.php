@@ -1,6 +1,6 @@
 <?php
 
-	mysqli_connect("localhost", "root", "root");
+	$link = mysqli_connect("localhost", "root", "root");
 
 	if ( mysqli_connect_error() ) {
 
