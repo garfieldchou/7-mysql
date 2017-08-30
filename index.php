@@ -11,9 +11,11 @@
 
 	$query = "SELECT * FROM users";
 
-	if ( mysqli_query( $link, $query ) ) {
+	if ( $result = mysqli_query( $link, $query ) ) {
 
-		echo "Query was successful";
+		$row = mysqli_fetch_array( $result );
+
+		print_r( $row );
 
 	}
 
