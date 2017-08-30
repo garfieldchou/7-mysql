@@ -15,7 +15,7 @@
 
 		$row = mysqli_fetch_array( $result );
 
-		print_r( $row );
+		echo "Your email is ".$row['email']." and your password is ".$row['password'];
 
 	}
 
