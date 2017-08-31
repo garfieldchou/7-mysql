@@ -11,7 +11,7 @@
 
 	//$query = "INSERT INTO users (email, password) VALUES('tommy@gmail.com', 'isefju&')";
 
-	$query = "UPDATE users SET email = 'robpercival@gmail.com' WHERE id = 1 LIMIT 1";
+	$query = "UPDATE users SET password = 'qerjekal13adfU' WHERE email = 'robpercival@gmail.com' LIMIT 1";
 
 	if ( mysqli_query( $link, $query ) ) {
 	    echo "New record updated successfully";
