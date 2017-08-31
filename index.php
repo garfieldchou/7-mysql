@@ -9,6 +9,14 @@
 
 	}
 
+	$query = "INSERT INTO users (email, password) VALUES('kirsten@kirstenpercival.co.uk', 'isefju&7feU123')";
+
+	if ( mysqli_query( $link, $query ) ) {
+	    echo "New record created successfully";
+	} else {
+	    echo "Error: " . $query . "<br>" . mysqli_error($link);
+	}
+
 	$query = "SELECT * FROM users";
 
 	if ( $result = mysqli_query( $link, $query ) ) {
