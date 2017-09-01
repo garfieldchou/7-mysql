@@ -9,18 +9,14 @@
 
 	}
 
-	$name = "Rob O'Grady";
-
-	$query = "SELECT email FROM users WHERE name = '".mysqli_real_escape_string( $link, $name)."'";
-
-	if ( $result = mysqli_query( $link, $query ) ) {
-
-		while ( $row = mysqli_fetch_array( $result ) ) {
-
-			print_r( $row );
-
-		}
-
-	}
-
 ?>
+
+<form method = "post">
+
+	<input name="email" type="text" placeholder="Email address">
+
+	<input name="password" type="password" placeholder="Password">
+
+	<input type="submit" value="Sign up">
+
+</form>
