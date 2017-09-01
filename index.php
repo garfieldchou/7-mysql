@@ -9,7 +9,7 @@
 
 	}
 
-	$query = "SELECT * FROM users WHERE id = 1";
+	$query = "SELECT * FROM users WHERE email = 'kirsten@kirstenpercival.co.uk'";
 
 	if ( $result = mysqli_query( $link, $query ) ) {
 
