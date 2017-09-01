@@ -9,7 +9,7 @@
 
 	}
 
-	$query = "SELECT * FROM users WHERE id >= 2";
+	$query = "SELECT email FROM users WHERE id >= 2";
 
 	if ( $result = mysqli_query( $link, $query ) ) {
 
