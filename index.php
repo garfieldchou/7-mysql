@@ -2,8 +2,16 @@
 
 	if ( array_key_exists('email', $_POST) OR array_key_exists('password', $_POST) ) {
 
-		print_r($_POST);
-		
+		if ( $_POST['email'] == '' ) {
+
+			echo '<p>Email address is required.</p>';
+
+		} else if ( $_POST['password'] == '' ) {
+
+			echo '<p>Password is required.</p>';
+
+		}
+
 	}
 
 	$link = mysqli_connect("localhost", "root", "root", "users");
