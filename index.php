@@ -9,7 +9,7 @@
 
 	}
 
-	$query = "SELECT * FROM users WHERE email = 'kirsten@kirstenpercival.co.uk'";
+	$query = "SELECT * FROM users WHERE email LIKE '%gmail.com'";
 
 	if ( $result = mysqli_query( $link, $query ) ) {
 
