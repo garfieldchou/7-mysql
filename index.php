@@ -9,7 +9,7 @@
 
 	}
 
-	$query = "SELECT * FROM users";
+	$query = "SELECT * FROM users WHERE id = 1";
 
 	if ( $result = mysqli_query( $link, $query ) ) {
 
