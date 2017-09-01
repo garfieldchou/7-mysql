@@ -1,5 +1,11 @@
 <?php
 
+	if ( array_key_exists('email', $_POST) OR array_key_exists('password', $_POST) ) {
+
+		print_r($_POST);
+		
+	}
+
 	$link = mysqli_connect("localhost", "root", "root", "users");
 	// server name, user name for server, password for server, database name
 
