@@ -21,7 +21,6 @@
 
 		} else {
 
-
 			$query = "SELECT id FROM users WHERE email = '".mysqli_real_escape_string( $link, $_POST['email'])."'";
 
 			$result = mysqli_query( $link, $query );
@@ -30,6 +29,19 @@
 
 				echo "<p>That mail address has already been taken.</p>";
 
+			} else {
+
+				$query = "INSERT INTO users (email, password) VALUES ('".mysqli_real_escape_string( $link, $_POST['email'])."', '".mysqli_real_escape_string( $link, $_POST['password'])."')";
+
+				if ( mysqli_query( $link, $query ) ) {
+
+					echo "<p>You have been signed up!</p>";
+
+				} else {
+
+					echo "<p>There was a problem signing you up - please try again later.</p>";
+
+				}
 			}
 
 		}
