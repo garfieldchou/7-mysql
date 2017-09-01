@@ -9,7 +9,7 @@
 
 	}
 
-	$query = "SELECT email FROM users WHERE id >= 2";
+	$query = "SELECT email FROM users WHERE id >= 2 AND email LIKE '%T%'";
 
 	if ( $result = mysqli_query( $link, $query ) ) {
 
