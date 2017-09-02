@@ -1,7 +1,7 @@
 <?php
 
-    $salt = "ieadkfjaiefjdaksfeD-134";
+    $row['id'] = 73;
 
-    echo md5($salt."password");
+    echo md5(md5($row['id'])."password");
     
 ?>
