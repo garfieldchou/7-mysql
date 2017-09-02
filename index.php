@@ -2,11 +2,31 @@
 
     if ( array_key_exists("submit", $_POST) ) {
         
-        print_r($_POST);
+        $error = "";
+        
+        if ( !$_POST['email'] ) {
+            
+            $error .= "An email address is required</br>";
+            
+        }
+        
+        if ( !$_POST['password'] ) {
+            
+            $error .= "A password is required</br>";
+            
+        }
+
+        if ( $error != "") {
+            
+            $error = "<p>There were error(s) in your form</p>".$error;
+        
+        }
         
     }
     
 ?>
+
+<div id="error"><?php echo $error; ?></div>
 
 <form method="post">
 
