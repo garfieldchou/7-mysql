@@ -1,5 +1,7 @@
 <?php
 
-    echo md5("password");
+    $salt = "ieadkfjaiefjdaksfeD-134";
+
+    echo md5($salt."password");
     
 ?>
