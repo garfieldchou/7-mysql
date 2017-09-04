@@ -1,5 +1,9 @@
 <?php
 
+	session_start();
+
+    $error = "";	
+
     if ( array_key_exists("submit", $_POST) ) {
         
         $link = mysqli_connect('localhost', 'root', 'root', 'secretdi');
@@ -9,8 +13,6 @@
             die("Database connection error");
             
         }
-        
-        $error = "";
         
         if ( !$_POST['email'] ) {
             
@@ -51,6 +53,14 @@
                     $query = "UPDATE users SET password = '".md5(md5(mysqli_insert_id($link)).$_POST['password'])."' WHERE id = ".mysqli_insert_id($link)." LIMIT 1";
                     
                     mysqli_query($link, $query);
+
+                    $_SESSION['id'] = mysqli_insert_id($link);
+
+                    if ( $_POST['stayLoggedIn'] == '1' ) {
+
+                    	setcookie( "id", mysqli_insert_id($link), time()+60*60*24*365);
+                    	
+                    }
                     
                     echo "Sign up successful";
                     
