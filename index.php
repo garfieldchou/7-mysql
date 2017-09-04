@@ -62,7 +62,7 @@
                     	
                     }
                     
-                    echo "Sign up successful";
+                    header("Location: loggedinpage.php");
                     
                 }
             
