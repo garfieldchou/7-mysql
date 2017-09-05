@@ -6,7 +6,7 @@
 
     if ( array_key_exists("logout", $_GET) ) {
 
-    	session_destroy();
+    	unset($_SESSION);
     	setcookie("id", "", time() - 60*60);
     	$_COOKIE["id"] = "";
 
@@ -90,7 +90,7 @@
 
         		$row = mysqli_fetch_array( $result );
 
-        		if ( array_key_exists( "id", $row ) ) {
+        		if ( isset( $row ) ) {
 
         			$hashedPassword = md5(md5($row['id']).$_POST['password']);
 
@@ -106,7 +106,14 @@
 	                    
 	                    header("Location: loggedinpage.php");        				
 
+        			} else {
+
+        				$error = "That email/password combination could not be found.";
         			}
+
+        		} else {
+
+        			$error = "That email/password combination could not be found.";
 
         		}
 
