@@ -223,7 +223,8 @@
         
         $("#showLogInForm").click(function() {
             
-            alert("hi!");
+            $("#signUpForm").toggle();
+            $("#logInForm").toggle();
             
         });
     
