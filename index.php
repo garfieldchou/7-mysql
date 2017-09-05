@@ -187,7 +187,7 @@
 		    	<input type="submit" class="btn btn-success" name="submit" value="Sign Up!">
 		    </div>
             
-            <p><a id="showLogInForm">Log in</a></p>
+            <p><a class="toggleForms">Log in</a></p>
 		    
 		</form>
 
@@ -208,6 +208,8 @@
 		    <div class="form-group">		    
 		    	<input type="submit" class="btn btn-success" name="submit" value="Log In!">
 		    </div>
+            
+            <p><a class="toggleForms">Sign up</a></p>            
 		    
 		</form>
 
@@ -221,7 +223,7 @@
     
     <script type="text/javascript">
         
-        $("#showLogInForm").click(function() {
+        $(".toggleForms").click(function() {
             
             $("#signUpForm").toggle();
             $("#logInForm").toggle();
