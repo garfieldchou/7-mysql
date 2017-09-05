@@ -155,6 +155,10 @@
 	    	background: none;
 	    }
 
+	    #logInForm {
+	    	display: none;
+	    }
+
     </style>
   </head>
   <body>
@@ -165,7 +169,7 @@
 
 		<div id="error"><?php echo $error; ?></div>
 
-		<form method="post">
+		<form method="post" id="signUpForm">
 
 			<div class="form-group">
 		    	<input type="email" class="form-control" name="email" placeholder="Your Email">
@@ -185,7 +189,7 @@
 		    
 		</form>
 
-		<form method="post">
+		<form method="post" id="logInForm">
 
 		    <div class="form-group">
 		    	<input type="email" class="form-control" name="email" placeholder="Your Email">
