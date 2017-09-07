@@ -153,6 +153,7 @@
 
 	    body {
 	    	background: none;
+	    	color: #FFF;
 	    }
 
 	    #logInForm {
@@ -167,9 +168,13 @@
 
     	<h1>Secret Diary</h1>
 
+    	<p><strong>Store your thoughts permanently and securely.</strong></p>
+
 		<div id="error"><?php echo $error; ?></div>
 
 		<form method="post" id="signUpForm">
+
+			<p>Interested? Sign up now.</p>
 
 			<div class="form-group">
 		    	<input type="email" class="form-control" name="email" placeholder="Your Email">
@@ -192,6 +197,8 @@
 		</form>
 
 		<form method="post" id="logInForm">
+
+			<p>Log in using your username and password.</p>
 
 		    <div class="form-group">
 		    	<input type="email" class="form-control" name="email" placeholder="Your Email">
