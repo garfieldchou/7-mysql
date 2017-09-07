@@ -160,6 +160,10 @@
 	    	display: none;
 	    }
 
+	    .toggleForms {
+	    	font-weight: bold;
+	    }
+
     </style>
   </head>
   <body>
