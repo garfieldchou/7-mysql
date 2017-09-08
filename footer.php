@@ -13,6 +13,12 @@
             $("#logInForm").toggle();
             
         });
+        
+        $('#diary').bind('input propertychange', function() {
+            
+            alert("Hi");
+            
+        });
     
     </script>
   </body>
