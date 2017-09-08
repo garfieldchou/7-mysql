@@ -18,13 +18,7 @@
 
     if ( array_key_exists("submit", $_POST) ) {
         
-        $link = mysqli_connect('localhost', 'root', 'root', 'secretdi');
-        
-        if (mysqli_connect_error()) {
-            
-            die("Database connection error");
-            
-        }
+        include("connection.php");
         
         if ( !$_POST['email'] ) {
             
