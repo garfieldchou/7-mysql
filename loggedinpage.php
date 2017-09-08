@@ -18,4 +18,18 @@
         
     }
     
+    include("header.php");
+    
+?>
+
+    <div class="container">
+    
+        <textarea id="diary" class="form-control"></textarea>
+    
+    </div>
+    
+<?php
+
+    include("footer.php");
+    
 ?>
