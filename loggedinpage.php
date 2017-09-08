@@ -22,7 +22,7 @@
     
 ?>
 
-    <div class="container">
+    <div class="container-fluid">
     
         <textarea id="diary" class="form-control"></textarea>
     

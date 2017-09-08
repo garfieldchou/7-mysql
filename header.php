@@ -13,8 +13,11 @@
 	    .container {
 	    	text-align: center;
 	    	width: 400px;
-	    	margin-top: 150px;
 	    }
+        
+        #homePageContainer {
+            margin-top: 150px;
+        }
 
 	    html {
 	    	background: url(background.jpg) no-repeat center center fixed; 
@@ -36,6 +39,13 @@
 	    .toggleForms {
 	    	font-weight: bold;
 	    }
+        
+        #diary {
+            
+            width: 100%;
+            height: 100%;
+            
+        }
 
     </style>
   </head>
